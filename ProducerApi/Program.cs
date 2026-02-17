@@ -1,9 +1,13 @@
+using ProducerApi.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddOpenApi();
 
 builder.Services.AddControllers();
+
+builder.Services.AddScoped<IOrderService, OrderService>();  
 
 var app = builder.Build();
 
