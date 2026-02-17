@@ -23,7 +23,7 @@ namespace ProducerApi.Services
             {
                 await producer.ProduceAsync(Topic, new Message<Null, string>
                 {
-                    Value = JsonSerializer.Serialize(Message)
+                    Value = JsonSerializer.Serialize(Message),
                 });
             }
         }
